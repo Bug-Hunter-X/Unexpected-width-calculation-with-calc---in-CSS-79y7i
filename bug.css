@@ -1,0 +1,7 @@
+The following CSS rule causes unexpected behavior in some browsers:
+
+```css
+div { width: calc(100% - 10px); }
+```
+
+This calculation might produce incorrect results if the parent element's width is not explicitly set or is affected by other CSS properties like padding, margin, or border.
