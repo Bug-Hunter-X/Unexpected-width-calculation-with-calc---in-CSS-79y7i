@@ -1,0 +1,26 @@
+The solution involves explicitly setting the width of the parent element or using alternative layout techniques to avoid relying solely on `calc()` for width determination:
+
+**Option 1: Set parent width:**
+
+```css
+.parent {
+  width: 300px;
+}
+
+div { width: calc(100% - 10px); }
+```
+
+**Option 2: Use other layout techniques:** (Example using flexbox)
+
+```css
+.parent {
+  display: flex;
+}
+
+div {
+  width: calc(100% - 10px);
+  flex-shrink: 1; /* Allow the div to shrink if necessary */
+}
+```
+
+Choose the method that best suits your specific layout requirements.
